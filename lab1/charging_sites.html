@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - charging-sites</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>Points on a map</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="charging_sites.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id='map'></div>
+  <script>
+    // The value for 'accessToken' begins with 'pk...' 
+    mapboxgl.accessToken = 'pk.eyJ1Ijoibmppa2VjIiwiYSI6ImNscmdmdmZqcTAxb2kyam1rNTl1N2wzemgifQ.66TD2YnVptsfg1ybTTn4jg';
+    const map = new mapboxgl.Map({
+      container: 'map',
+      // Replace YOUR_STYLE_URL with your style URL. 
+      style: 'mapbox://styles/njikec/clriyxngb00kr01pf8oqe9i9u',
+      center: [-0.1276, 51.5072],
+      zoom: 9
+    });
+    map.addControl(new mapboxgl.NavigationControl());
+  </script>
+  <script src="charging_sites.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
